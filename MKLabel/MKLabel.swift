@@ -18,13 +18,13 @@ class MKLabel: UIView {
         return gradientLayer
     }()
     
-    var textAttributes: [NSAttributedString.Key: AnyObject] {
+    var textAttributes: [NSAttributedStringKey: AnyObject] {
         let style = NSMutableParagraphStyle()
         style.alignment = .center
         
         return [
-            NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize),
-            NSAttributedString.Key.paragraphStyle: style
+            NSAttributedStringKey.font: UIFont.systemFont(ofSize: fontSize),
+            NSAttributedStringKey.paragraphStyle: style
         ]
     }
     
