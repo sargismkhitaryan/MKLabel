@@ -44,20 +44,7 @@ class MKLabel: UIView {
     
     @IBInspectable var text: String! {
         didSet {
-            setNeedsDisplay()
-            
-            UIGraphicsBeginImageContextWithOptions(frame.size, false, 0)
-            let te: NSString = text as NSString
-            te.draw(in: bounds, withAttributes: textAttributes)
-            let image = UIGraphicsGetImageFromCurrentImageContext()
-            UIGraphicsEndImageContext()
-            
-            let mask = CALayer()
-            mask.backgroundColor = UIColor.clear.cgColor
-            mask.frame = bounds.offsetBy(dx: 0, dy: 0)
-            mask.contents = image?.cgImage
-            
-            gradientLayer.mask = mask
+            updateText()
         }
     }
     
@@ -69,6 +56,7 @@ class MKLabel: UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
         gradientLayer.frame = CGRect(x: -bounds.origin.x, y: bounds.origin.y, width: 2*bounds.size.width, height: bounds.height)
+        updateText()
     }
     
     override func didMoveToWindow() {
@@ -98,6 +86,23 @@ class MKLabel: UIView {
             0.5
         ]
         gradientLayer.locations = locations
+    }
+    
+    fileprivate func updateText() {
+        setNeedsDisplay()
+        
+        UIGraphicsBeginImageContextWithOptions(frame.size, false, 0)
+        let te: NSString = text as NSString
+        te.draw(in: bounds, withAttributes: textAttributes)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        let mask = CALayer()
+        mask.backgroundColor = UIColor.clear.cgColor
+        mask.frame = bounds.offsetBy(dx: 0, dy: 0)
+        mask.contents = image?.cgImage
+        
+        gradientLayer.mask = mask
     }
     
     private func set(textColor: UIColor, animColor: UIColor) {
