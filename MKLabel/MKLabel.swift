@@ -51,6 +51,8 @@ class MKLabel: UIView {
     @IBInspectable var duration: Float = 5.0
     @IBInspectable var fontSize: CGFloat = 17.0
     
+    @IBInspectable var animationWidth: Float = -0.15
+    
     // MARK: - Overriden Methods
     
     override func layoutSubviews() {
@@ -63,7 +65,7 @@ class MKLabel: UIView {
         super.didMoveToWindow()
         
         let gradientAnimation = CABasicAnimation(keyPath: "locations")
-        gradientAnimation.fromValue = [-0.15, -0.1, 0]
+        gradientAnimation.fromValue = [animationWidth, animationWidth / 2, 0]
         gradientAnimation.toValue = [1, 1.5, 2]
         gradientAnimation.duration = CFTimeInterval(duration)
         gradientAnimation.repeatCount = Float.infinity
