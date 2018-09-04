@@ -38,6 +38,7 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="animationWidth">
                                                 <real key="value" value="-0.14999999999999999"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="fontName" value="Helvetica Neue"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zxb-O4-9yD" customClass="MKLabel" customModule="MKLabel" customModuleProvider="target">

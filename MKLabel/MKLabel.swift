@@ -22,8 +22,10 @@ class MKLabel: UIView {
         let style = NSMutableParagraphStyle()
         style.alignment = .center
         
+        let font = UIFont(name: fontName, size: fontSize) ?? UIFont.systemFont(ofSize: fontSize)
+        
         return [
-            NSAttributedStringKey.font: UIFont.systemFont(ofSize: fontSize),
+            NSAttributedStringKey.font: font,
             NSAttributedStringKey.paragraphStyle: style
         ]
     }
@@ -44,6 +46,12 @@ class MKLabel: UIView {
     
     @IBInspectable var text: String! {
         didSet {
+            updateText()
+        }
+    }
+    
+    @IBInspectable var fontName: String = "Helvetica Neue" {
+        didSet(value) {
             updateText()
         }
     }
