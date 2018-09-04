@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="230.5" width="375" height="206"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cPd-bX-4bk" customClass="MKLabel" customModule="MKLabel" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="62"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="text" value="Don't worry be sexy. But not naked ;)"/>
@@ -39,10 +39,35 @@
                                                 <real key="value" value="-0.14999999999999999"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="string" keyPath="fontName" value="Helvetica Neue"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="directionAdapter">
+                                                <integer key="value" value="0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fMB-46-Kr2" customClass="MKLabel" customModule="MKLabel" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="54" width="375" height="44"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="text" value="Don't worry be sexy. But not naked ;)"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                                <color key="value" red="1" green="0.3411764706" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="animationWidth">
+                                                <real key="value" value="-0.14999999999999999"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="directionAdapter">
+                                                <integer key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zxb-O4-9yD" customClass="MKLabel" customModule="MKLabel" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="72" width="375" height="62"/>
+                                        <rect key="frame" x="0.0" y="108" width="375" height="44"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="text" value="Don't worry be sexy. But not naked ;)"/>
@@ -61,7 +86,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="32G-tP-Mnn" customClass="MKLabel" customModule="MKLabel" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="144" width="375" height="62"/>
+                                        <rect key="frame" x="0.0" y="162" width="375" height="44"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="text" value="Don't worry be sexy. But not naked ;)"/>
@@ -76,6 +101,9 @@
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="animationColor">
                                                 <color key="value" red="0.74379237899999995" green="0.74379237899999995" blue="0.74379237899999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="direction">
+                                                <integer key="value" value="1"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>

@@ -11,6 +11,11 @@ import UIKit
 @IBDesignable
 class MKLabel: UIView {
     
+    enum AnimationDirection: Int {
+        case leftToRight
+        case rightToLeft
+    }
+    
     // MARK: - Properties
     
     var gradientLayer: CAGradientLayer = {
@@ -35,6 +40,17 @@ class MKLabel: UIView {
     @IBInspectable var textColor: UIColor = UIColor.orange {
         didSet(value) {
             set(textColor: value, animColor: animationColor)
+        }
+    }
+    
+    var animationDirection: AnimationDirection = .leftToRight
+    
+    @IBInspectable var directionAdapter: Int {
+        get {
+            return animationDirection.rawValue
+        }
+        set(value) {
+            animationDirection = AnimationDirection(rawValue: value) ?? .leftToRight
         }
     }
     
@@ -73,8 +89,17 @@ class MKLabel: UIView {
         super.didMoveToWindow()
         
         let gradientAnimation = CABasicAnimation(keyPath: "locations")
-        gradientAnimation.fromValue = [animationWidth, animationWidth / 2, 0]
-        gradientAnimation.toValue = [1, 1.5, 2]
+        
+        let lValue = [animationWidth, animationWidth / 2, 0]
+        let rValue = [1, 1.5, 2]
+        switch animationDirection {
+        case .leftToRight:
+            gradientAnimation.fromValue = lValue
+            gradientAnimation.toValue = rValue
+        case .rightToLeft:
+            gradientAnimation.fromValue = rValue
+            gradientAnimation.toValue = lValue
+        }
         gradientAnimation.duration = CFTimeInterval(duration)
         gradientAnimation.repeatCount = Float.infinity
         
