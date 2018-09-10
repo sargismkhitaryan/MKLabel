@@ -14,6 +14,11 @@ You can now customize all the properties in IB such as the `textColor`, `animati
 
 ![](Screen/MKLabel_Properties.png)
 
+## Author
+
+I'm Sargis Mkhitaryan.
+Email: [sargismk@icloud.com](mailto:sargismk@icloud.com).
+Twitter: [@SargisMk](https://twitter.com/Sargismk).
 
 ## License
 
