@@ -1,6 +1,6 @@
 # MKLabel
 
-[![Alt text for your video](https://github.com/sargismkhitaryan/MKLabel/blob/master/Screen/ScreenRecord.mov)
+![Alt text for your video](https://github.com/sargismkhitaryan/MKLabel/blob/master/Screen/ScreenRecord.mov)
 
 ## License
 
